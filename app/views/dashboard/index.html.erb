@@ -1,0 +1,14 @@
+<%= flash_messages %>
+<div class="block">
+	<header class="header-group">
+      <% if user_signed_in? %>
+        <h2>Welcome <%= current_user.username %></h2>
+      <% else %>
+        <h2>Welcome, please sign in.</h2>
+      <% end %>
+	</header>
+	<div class="row">
+		<div class="col-md-12">
+		</div>
+	</div>
+</div>

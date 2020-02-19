@@ -1,0 +1,19 @@
+    <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <%= link_to "Safer Schoolies", '#', id: "logo" %>
+        <nav>
+          <ul class="nav navbar-nav navbar-right">
+            <% if user_signed_in? %>
+              <li><%= link_to "Reports",   reports_path %></li>
+              <li><%= link_to "Categories",   categories_path %></li>
+              <li><%= link_to "Subcategories",   subcategories_path %></li>
+              <li><%= link_to "Locations",   locations_path %></li>              
+              <li><%= link_to current_user.username, 'users/edit' %></li>
+              <li><%= link_to "Log out", 'users/sign_out' %></li>
+            <% else %>
+              <li><%= link_to "Log in", 'sign_in' %></li>
+            <% end %>
+          </ul>
+        </nav>
+      </div>
+    </header>
