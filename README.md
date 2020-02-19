@@ -9,3 +9,10 @@ Devise - authentication, Rolify - roles-based access, Can Can Can - authorisatio
 Seeded with an admin user: admin@gmail.com / password1234 and a normal user: worker1@gmail.com / password1234
 
 Knock yourself out
+
+
+To do:
+
+* limit locations, categories & subcategories menus, lists and forms to Admin only
+* apply new and consistent styles with bootstrap
+* add ajax dropdown dependency code to reports for categories > subcategories
