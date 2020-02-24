@@ -23,8 +23,10 @@
           <td class="col-md-2"><%= report.category.name %></td>
           <td class="col-md-2"><%= report.subcategory.name %></td>
           <td class="col-md-2">
+          <% if current_user.admin? or (current_user.worker? and report.user == current_user) %>
             <%= link_to 'Edit', edit_report_path(report), class: "btn  btn-warning" %>
             <%= link_to 'Delete', report_path(report), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+          <% end %>
           </td>
         </tr>
       <% end %>

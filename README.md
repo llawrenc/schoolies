@@ -1,6 +1,7 @@
 # README
 
 Built upon example found here: https://www.nopio.com/blog/authentication-authorization-rails/
+Dynamic dependent dropdowns example: https://kernelgarden.wordpress.com/2014/02/26/dynamic-select-boxes-in-rails-4/
 
 Incorporates the following gems:
 

@@ -7,10 +7,10 @@ class User < ApplicationRecord
   has_many :reports, dependent: :destroy
 
   def admin?
-    has_role?(:admin)
+    has_role?(:'Admin')
   end
 
-  def client?
-    has_role?(:client)
+  def worker?
+    has_role?(:'Worker')
   end 
 end

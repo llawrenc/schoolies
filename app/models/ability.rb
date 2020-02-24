@@ -4,7 +4,7 @@ class Ability
   include CanCan::Ability
   def initialize(user)
     user ||= User.new
-    if user.client?
+    if user.worker?
       can :manage, Report, user_id: user.id
     elsif user.admin?
       can :manage, :all

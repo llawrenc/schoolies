@@ -12,6 +12,9 @@ class ReportsController < ApplicationController
 
   def new
     @report = Report.new
+    @locations = Location.all.order(:name)
+    @categories = Category.all.order(:name)
+    @subcategories = Subcategory.all.order(:name)
   end
 
   def edit
@@ -21,9 +24,6 @@ class ReportsController < ApplicationController
   end
 
   def create
-    @locations = Location.all.order(:name)
-    @categories = Category.all.order(:name)
-    @subcategories = Subcategory.where("category_id = ?", Category.first.id).order(:name)
     @report = Report.new(report_params)
     @report.user = current_user
     if @report.save

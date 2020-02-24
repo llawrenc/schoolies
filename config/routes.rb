@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   resources :categories
   devise_for :users, path: ''
   resources :reports
+  resources :users
   root 'dashboard#index'
 end
